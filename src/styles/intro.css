@@ -1,0 +1,29 @@
+.intro-section {
+  background: #0b0b0b;
+  color: white;
+  padding: 120px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-kicker {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 24px;
+}
+
+.intro-section h2 {
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1.05;
+  max-width: 1050px;
+  margin-bottom: 32px;
+}
+
+.intro-section p:last-child {
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.72);
+  max-width: 760px;
+}

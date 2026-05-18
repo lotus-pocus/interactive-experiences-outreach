@@ -1,0 +1,77 @@
+.browser-benefits {
+  padding: 140px 7vw;
+  background: #ffffff;
+  color: #050505;
+}
+
+.browser-benefits-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.browser-benefits-copy {
+  position: sticky;
+  top: 80px;
+}
+
+.browser-benefits-copy > p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: rgba(0,0,0,0.5);
+  margin-bottom: 18px;
+}
+
+.browser-benefits-copy h2 {
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.02;
+  margin-bottom: 28px;
+}
+
+.browser-benefits-copy span {
+  display: block;
+  max-width: 560px;
+  font-size: 19px;
+  line-height: 1.6;
+  color: rgba(0,0,0,0.68);
+}
+
+.browser-benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.browser-benefit-card {
+  padding: 34px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(0,0,0,0.025);
+}
+
+.browser-benefit-card h3 {
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+.browser-benefit-card p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(0,0,0,0.66);
+}
+
+@media (max-width: 900px) {
+  .browser-benefits {
+    padding: 90px 24px;
+  }
+
+  .browser-benefits-inner {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .browser-benefits-copy {
+    position: static;
+  }
+}

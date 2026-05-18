@@ -1,0 +1,84 @@
+.live-engagement {
+  padding: 140px 7vw;
+  background: #0b0b0b;
+  color: white;
+}
+
+.live-header {
+  max-width: 980px;
+  margin-bottom: 60px;
+}
+
+.live-header p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 18px;
+}
+
+.live-header h2 {
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.05;
+}
+
+.live-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.live-card {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background: #111;
+}
+
+.live-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.live-card:hover img {
+  transform: scale(1.06);
+}
+
+.live-card span {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  right: 18px;
+  z-index: 2;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.live-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.72) 0%,
+    rgba(0,0,0,0.1) 60%
+  );
+}
+
+@media (max-width: 900px) {
+  .live-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .live-engagement {
+    padding: 90px 24px;
+  }
+
+  .live-grid {
+    grid-template-columns: 1fr;
+  }
+}

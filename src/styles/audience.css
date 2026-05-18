@@ -1,0 +1,71 @@
+.audience {
+  padding: 110px 7vw;
+}
+
+.audience-header {
+  max-width: 900px;
+  margin-bottom: 55px;
+}
+
+.audience-header p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 18px;
+}
+
+.audience-header h2 {
+  font-size: clamp(34px, 4.4vw, 58px);
+  line-height: 1.05;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.12);
+}
+
+.audience-card {
+  background: #0b0b0b;
+  padding: 34px;
+  min-height: 240px;
+}
+
+.audience-card span {
+  display: block;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 48px;
+  font-size: 14px;
+}
+
+.audience-card h3 {
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.audience-card p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.72);
+}
+
+@media (max-width: 768px) {
+  .audience {
+    padding: 90px 24px;
+  }
+
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-card {
+    padding: 30px;
+    min-height: auto;
+  }
+
+  .audience-card span {
+    margin-bottom: 40px;
+  }
+}

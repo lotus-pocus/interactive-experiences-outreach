@@ -44,14 +44,14 @@
 }
 
 .stat-card h3 {
-  font-size: clamp(42px, 5vw, 72px);
+  font-size: clamp(32px, 4vw, 56px);
   line-height: 1;
   margin-bottom: 14px;
 }
 
 .stat-card p {
-  font-size: 17px;
-  color: rgba(0,0,0,0.62);
+  font-size: 18px;
+  color: rgba(0,0,0,0.72);
 }
 
 @media (max-width: 900px) {

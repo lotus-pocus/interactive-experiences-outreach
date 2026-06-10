@@ -1,10 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 13500, suffix: "+", label: "Delegates reached" },
-  { value: 190, suffix: "+", label: "HCP interactions" },
-  { value: 11000, suffix: "+", label: "Interactive plays" },
-  { value: 130, suffix: "", label: "Countries represented" }
+  { value: 35000, suffix: "+", label: "Audience interactions" },
+  { value: 11, suffix: "", label: "Live activations tracked" },
+  { value: 10000, suffix: "+", label: "Plays in a single activation series" },
+  {
+    value: null,
+    suffix: "",
+    label: "Audience analytics",
+    text: "Built-in",
+    compact: true,
+  },
 ];
 
 function CountUp({ end, suffix = "" }) {
@@ -19,7 +25,7 @@ function CountUp({ end, suffix = "" }) {
           setStarted(true);
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -62,22 +68,31 @@ export default function StatsSection() {
   return (
     <section className="stats-section">
       <div className="stats-copy">
-        <p>Delivered at scale</p>
+        <p>Measured engagement</p>
 
         <h2>
-          Interactive experiences designed for real audiences, live events and measurable engagement.
+          Interactive experiences that don’t just attract attention, they
+          generate useful engagement data.
         </h2>
 
         <span>
-          From immersive pharma congress experiences to multiplayer interactive activations, our work has been deployed internationally across exhibitions, retail environments and audience engagement campaigns.
+          From participation rates and interaction volumes to audience behaviour
+          and repeat engagement, analytics help teams understand what resonates
+          most and where engagement is highest. The metrics shown here are drawn
+          from a selection of live retail and event activations, including Sky
+          engagement experiences and other interactive campaigns.
         </span>
       </div>
 
       <div className="stats-grid">
         {stats.map((stat, index) => (
           <div className="stat-card" key={index}>
-            <h3>
-              <CountUp end={stat.value} suffix={stat.suffix} />
+            <h3 className={stat.compact ? "compact-stat" : ""}>
+              {stat.value !== null ? (
+                <CountUp end={stat.value} suffix={stat.suffix} />
+              ) : (
+                stat.text
+              )}
             </h3>
             <p>{stat.label}</p>
           </div>

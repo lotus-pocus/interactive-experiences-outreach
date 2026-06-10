@@ -1,11 +1,39 @@
+@font-face {
+  font-family: "Lubalin";
+  src: url("/fonts/LubalinGraphStd-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("/fonts/Tiempos Headline - Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: "Lubalin", Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Tiempos Headline", Georgia, serif;
+  font-weight: 900;
+}
+
 body {
   background: #0b0b0b;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
 }

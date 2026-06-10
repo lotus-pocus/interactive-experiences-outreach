@@ -21,9 +21,9 @@ export default function Hero() {
 
       <div className="hero-content">
         <div className="hero-heading">
-          <p className="hero-kicker">Real-time Interactive Experiences</p>
+          <p className="hero-kicker">WEBGL • VR • MULTIPLAYER • LIVE EVENTS</p>
 
-          <h1>Realtime Interactive Experiences</h1>
+          <h1>Interactive Experiences for Real Audiences</h1>
         </div>
 
         <div className="hero-copy">

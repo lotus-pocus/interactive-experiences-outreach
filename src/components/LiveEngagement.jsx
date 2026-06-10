@@ -4,10 +4,26 @@ import skyHundredImg from "../assets/images/SkyHundred.jpg";
 import skyPiggyBankImg from "../assets/images/SkyPiggyBank.jpg";
 
 const games = [
-  { title: "Motion Tracking Design your own F1 car", image: skyF1Img },
-  { title: "Character-Based Photobooth Game", image: skyMinionImg },
-  { title: "Timed Sports Challenge Experience", image: skyHundredImg },
-  { title: "Interactive Endless Runner Rewards Game", image: skyPiggyBankImg }
+  {
+    title: "Motion Tracking Design your own F1 car",
+    image: skyF1Img,
+    url: "https://www.youtube.com/watch?v=r-OOmb30DwE"
+  },
+  {
+    title: "Character-Based Photobooth Game",
+    image: skyMinionImg,
+    url: "https://www.gamoola.com/lab_projects/sky-instore-minion-photobooth/"
+  },
+  {
+    title: "Timed Sports Challenge Experience",
+    image: skyHundredImg,
+    url: "https://www.gamoola.com/lab_projects/sky-instore-the-hundred/"
+  },
+  {
+    title: "Interactive Endless Runner Rewards Game",
+    image: skyPiggyBankImg,
+    url: "https://www.gamoola.com/lab_projects/sky-instore-piggybank-racers/"
+  }
 ];
 
 export default function LiveEngagement() {
@@ -20,10 +36,18 @@ export default function LiveEngagement() {
 
       <div className="live-grid">
         {games.map((game, index) => (
-          <article className="live-card" key={index}>
-            <img src={game.image} alt={game.title} />
-            <span>{game.title}</span>
-          </article>
+          <a
+            href={game.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="live-card-link"
+            key={index}
+          >
+            <article className="live-card">
+              <img src={game.image} alt={game.title} />
+              <span>{game.title}</span>
+            </article>
+          </a>
         ))}
       </div>
     </section>

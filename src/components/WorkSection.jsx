@@ -13,7 +13,8 @@ const projects = [
     text: "A realtime browser-based platform designed to increase engagement through interactive experiences, rewards and gamified participation.",
     image: gotoImg,
     hoverVideo: gotoHover,
-    mediaClass: ""
+    mediaClass: "",
+    url: "https://www.gamoola.com/projects/goto-gamoola/"
   },
   {
     title: "Enterprise Interactive Platform",
@@ -21,7 +22,8 @@ const projects = [
     text: "An interactive 3D sales platform helping teams explore products, workflows and business scenarios through realtime interaction.",
     image: samsungImg,
     hoverVideo: samsungHover,
-    mediaClass: "samsung-media"
+    mediaClass: "samsung-media",
+    url: "https://www.gamoola.com/projects/samsung-gamoola/"
   },
   {
     title: "Immersive VR Experience",
@@ -29,7 +31,8 @@ const projects = [
     text: "A cinematic immersive experience designed to help communicate complex treatment stories and healthcare messaging in engaging ways.",
     image: havasVrImg,
     hoverVideo: tavneosHover,
-    mediaClass: ""
+    mediaClass: "",
+    url: "https://www.gamoola.com/projects/havas-vr-experience/"
   }
 ];
 
@@ -53,33 +56,41 @@ export default function WorkSection() {
 
       <div className="work-grid">
         {projects.map((project, index) => (
-          <article className="work-card" key={index}>
-            <div className="work-image-wrapper">
-              <img
-                src={project.image}
-                alt={project.title}
-                className={project.mediaClass}
-              />
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="work-card-link"
+            key={index}
+          >
+            <article className="work-card">
+              <div className="work-image-wrapper">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className={project.mediaClass}
+                />
 
-              <video
-                src={project.hoverVideo}
-                className={project.mediaClass}
-                muted
-                loop
-                playsInline
-                preload="none"
-                aria-hidden="true"
-                onMouseEnter={handleVideoEnter}
-                onMouseLeave={handleVideoLeave}
-              />
-            </div>
+                <video
+                  src={project.hoverVideo}
+                  className={project.mediaClass}
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
+                  aria-hidden="true"
+                  onMouseEnter={handleVideoEnter}
+                  onMouseLeave={handleVideoLeave}
+                />
+              </div>
 
-            <div className="work-card-content">
-              <p>{project.type}</p>
-              <h3>{project.title}</h3>
-              <span>{project.text}</span>
-            </div>
-          </article>
+              <div className="work-card-content">
+                <p>{project.type}</p>
+                <h3>{project.title}</h3>
+                <span>{project.text}</span>
+              </div>
+            </article>
+          </a>
         ))}
       </div>
     </section>
